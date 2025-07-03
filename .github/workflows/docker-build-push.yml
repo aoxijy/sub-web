@@ -1,10 +1,12 @@
-name: Build and Push Multi-Arch Docker Image
+name: Build and Push Custom Tag Docker Image
 
 on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:  # ✅ 启用手动运行按钮
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Docker 镜像版本号（如 1.1）'
+        required: true
+        default: '1.0'
 
 jobs:
   build-and-push:
@@ -29,5 +31,7 @@ jobs:
         context: .
         platforms: linux/amd64,linux/arm64
         push: true
-        no-cache: true            # ✅ 禁用缓存，强制重新构建
-        tags: aoxijy/sub-web:latest
+        no-cache: true
+        tags: |
+          aoxijy/sub-web:latest
+          aoxijy/sub-web:${{ github.event.inputs.version }}
