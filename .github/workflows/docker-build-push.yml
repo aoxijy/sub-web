@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v3  # 推荐用 v3，不建议用 master 分支
+      uses: actions/checkout@v3
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -29,4 +29,5 @@ jobs:
         context: .
         platforms: linux/amd64,linux/arm64
         push: true
+        no-cache: true            # ✅ 禁用缓存，强制重新构建
         tags: aoxijy/sub-web:latest
