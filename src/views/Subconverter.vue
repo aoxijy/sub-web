@@ -237,9 +237,9 @@ export default {
                   "https://raw.githubusercontent.com/aoxijy/guize/refs/heads/main/Clash-Full.ini"
               },
               {
-                label: "AI-auto",
+                label: "guonei-auto",
                 value:
-                  "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/ytoo.ini"
+                  "https://gitee.com/gqru/ziyong/raw/master/Clash-Full.ini"
               },
               {
                 label: "full-auto",
