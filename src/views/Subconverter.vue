@@ -242,9 +242,9 @@ export default {
                   "https://gitee.com/gqru/ziyong/raw/master/Clash-Full.ini"
               },
               {
-                label: "full-auto",
+                label: "gqru-auto",
                 value:
-                  "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/flowercloud.ini"
+                  "http://dl.gqru.com/rule/Clash-Full.ini"
               },
             ]
           },
