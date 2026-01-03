@@ -480,12 +480,12 @@ export default {
       const h = this.$createElement;
 
       this.$notify({
-        title: "隐私提示",
+        title: "敬告提示",
         type: "warning",
         message: h(
           "i",
           { style: "color: teal" },
-          "各种订阅链接（短链接服务除外）生成纯前端实现，无隐私问题。默认提供后端转换服务，隐私担忧者请自行搭建后端服务。"
+          "此程序为公司内部使用，虽为公开的链接，但是转换时会有实际记录，请您谨慎考虑。"
         )
       });
     },
